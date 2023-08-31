@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	pb "Netxd_Project/Netxd_Customer/customer"
+	pb "github.com/ROHITHSAKTHIVEL/Netxd_Customer_Proto/proto"
 
 	"google.golang.org/grpc"
 )
@@ -20,13 +20,13 @@ func main() {
 	client := pb.NewCustomerServiceClient(conn)
 
 	response, err := client.CreateCustomer(context.Background(), &pb.Customer{
-		CustomerId: 123,
-		FirstName:  "kishore",
-		SecondName: "",
-		BankId:     0,
-		Balance:    10000,
-		CreatedAt:  "2023.08.30",
-		UpdatedAt:  "2023.08.30",
+		CustomerId: 4545,
+		FirstName:  "Rohith ",
+		SecondName: "S",
+		BankId:     1,
+		Balance:    1000,
+		CreatedAt:  "2023.08.31",
+		UpdatedAt:  "2023.08.31",
 		IsActive:   true,
 	})
 	if err != nil {
